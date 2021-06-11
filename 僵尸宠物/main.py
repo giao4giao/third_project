@@ -24,12 +24,12 @@ class MyLabel(QLabel):
 	def rightMenuShow(self):
 		menu = QMenu(self)
 		transformation1 = QAction(QIcon(r'resources\graphics\Zombies\NormalZombie\Zombie\Zombie_0.png'), self.name[0],
-								  self, triggered=lambda: self.transformation_signal.emit(0))
+		                          self, triggered=lambda: self.transformation_signal.emit(0))
 		transformation2 = QAction(
 			QIcon(r'resources\graphics\Zombies\ConeheadZombie\ConeheadZombie\ConeheadZombie_0.png'), self.name[1], self,
 			triggered=lambda: self.transformation_signal.emit(1))
 		transformation3 = QAction(QIcon(r'resources\graphics\Zombies\FlagZombie\FlagZombie\FlagZombie_0.png'),
-								  self.name[2], self, triggered=lambda: self.transformation_signal.emit(2))
+		                          self.name[2], self, triggered=lambda: self.transformation_signal.emit(2))
 		transformation4 = QAction(
 			QIcon(r'resources\graphics\Zombies\BucketheadZombie\BucketheadZombie\BucketheadZombie_0.png'), self.name[3],
 			self, triggered=lambda: self.transformation_signal.emit(3))
@@ -76,7 +76,7 @@ def check_files(func):
 			func(*args, **kwargs)
 		else:
 			QMessageBox(
-		QMessageBox.Warning, '警告', '       未发现资源文件夹\n           无法运行\n请检查resources文件夹是否在同一目录').exec_()
+				QMessageBox.Warning, '警告', '       未发现资源文件夹\n           无法运行\n请检查resources文件夹是否在同一目录').exec_()
 			exit()
 
 	return main
@@ -221,12 +221,12 @@ class TablePet(QWidget):
 		tp.setIcon(QIcon(r'resources\graphics\main.ico'))
 		ation_quit = QAction('退出', self, triggered=self.quit)
 		transformation1 = QAction(QIcon(r'resources\graphics\Zombies\NormalZombie\Zombie\Zombie_0.png'), self.name[0],
-								  self, triggered=lambda: self.wardrobe(0))
+		                          self, triggered=lambda: self.wardrobe(0))
 		transformation2 = QAction(
 			QIcon(r'resources\graphics\Zombies\ConeheadZombie\ConeheadZombie\ConeheadZombie_0.png'), self.name[1], self,
 			triggered=lambda: self.wardrobe(1))
 		transformation3 = QAction(QIcon(r'resources\graphics\Zombies\FlagZombie\FlagZombie\FlagZombie_0.png'),
-								  self.name[2], self, triggered=lambda: self.wardrobe(2))
+		                          self.name[2], self, triggered=lambda: self.wardrobe(2))
 		transformation4 = QAction(
 			QIcon(r'resources\graphics\Zombies\BucketheadZombie\BucketheadZombie\BucketheadZombie_0.png'), self.name[3],
 			self, triggered=lambda: self.wardrobe(3))
